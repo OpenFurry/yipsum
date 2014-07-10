@@ -80,7 +80,7 @@ $(document).ready(function() {
     result += '<p>';
     _(7).times(function(sentence) {
       _(Math.floor((Math.random() * 10) / 3) + 1).times(function(phrase) {
-        _(Math.floor(Math.random() * 10)).times(function(word) {
+        _(Math.floor(Math.random() * 10) + 1).times(function(word) {
           sourceWord = _.sample(sourceWords);
           if (phrase === 0 && word === 0) {
             sourceWord = sourceWord.charAt(0).toUpperCase() + sourceWord.slice(1);
