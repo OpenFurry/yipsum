@@ -24,6 +24,7 @@ var sourceWords = [
   // Various
   'popufur',
   'feesh',
+  'booper',
 
   // Art
   'commission',
@@ -58,6 +59,10 @@ var sourceWords = [
   'wolf',
   'husky',
   'cat',
+  'ott',
+  'otter',
+  'sparkledog',
+
 
   // Noises
   'yap',
@@ -67,11 +72,18 @@ var sourceWords = [
   'meow',
   'growl',
   'murr',
+  'reh',
+  'squeak',
 
   // Verbs
   'wiggle',
   'scritch',
   'pet',
+  'boop',
+  'whiskerflick',
+  'tailswish',
+  'swish',
+  'wag',
 ];
 
 $(document).ready(function() {
