@@ -26,6 +26,11 @@ const sourceWords = [
   'booper',
   'snoot',
   'scruff',
+  'paws',
+  'pawbs',
+  'beans',
+  'maws',
+  'tail',
 
   // Art
   'commission',
@@ -87,6 +92,9 @@ const sourceWords = [
   'wag',
   'nuzzle',
   'fluff',
+  'glomp',
+  'clop',
+  'nuzzle',
 
   // Etc.
   'graymuzzle',
