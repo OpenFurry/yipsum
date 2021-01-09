@@ -72,6 +72,10 @@ const sourceWords = [
   'ott',
   'otter',
   'sparkledog',
+  'birb',
+  'fops',
+  'bunny',
+  'bunneh',
 
   // Noises
   'yap',
@@ -103,6 +107,8 @@ const sourceWords = [
   'snuggle',
   'snug',
   'noodle',
+  'floof',
+  'fuzzle',
 
   // Etc.
   'graymuzzle',
@@ -110,6 +116,7 @@ const sourceWords = [
   'uwu',
   'popufur',
   'feesh',
+  'after dark',
 ];
 
 function toUpperFirst(s) {
