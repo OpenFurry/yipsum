@@ -85,6 +85,8 @@ const sourceWords = [
   'meow',
   'growl',
   'murr',
+  'purr',
+  'rawr',
   'reh',
   'squeak',
   'awoo',
