@@ -20,11 +20,12 @@ const sourceWords = [
   'suiter',
   'headless',
   'ruining the magic',
+  'poodling',
 
-  // Various
-  'popufur',
-  'feesh',
+  // Body parts
   'booper',
+  'snoot',
+  'scruff',
 
   // Art
   'commission',
@@ -84,6 +85,15 @@ const sourceWords = [
   'tailswish',
   'swish',
   'wag',
+  'nuzzle',
+  'fluff',
+
+  // Etc.
+  'graymuzzle',
+  'owo',
+  'uwu',
+  'popufur',
+  'feesh',
 ];
 
 function toUpperFirst(s) {
