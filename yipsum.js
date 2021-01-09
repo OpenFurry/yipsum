@@ -1,4 +1,4 @@
-var sourceWords = [
+const sourceWords = [
   // Variations on fur
   'fur',
   'furry',
@@ -86,25 +86,68 @@ var sourceWords = [
   'wag',
 ];
 
-$(document).ready(function() {
-  result = '';
-  _(5).times(function(paragraph) {
-    result += '<p>';
-    _(7).times(function(sentence) {
-      _(Math.floor((Math.random() * 10) / 3) + 1).times(function(phrase) {
-        _(Math.floor(Math.random() * 10) + 1).times(function(word) {
-          sourceWord = _.sample(sourceWords);
-          if (phrase === 0 && word === 0) {
-            sourceWord = sourceWord.charAt(0).toUpperCase() + sourceWord.slice(1);
-          }
-          result += sourceWord + ' ';
+function toUpperFirst(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function gen() {
+  let words = 0;
+  let finished = false;
+  let result = '';
+
+  const wordCount = parseInt($('#wordcount').val()) > 1
+    ? parseInt($('#wordcount').val()) 
+    : 500;
+  const chapterCount = parseInt($('#chaptercount').val()) > 1
+    ? parseInt($('#chaptercount').val())
+    : 1;
+  const paragraphsPerChapter = Math.ceil(wordCount / chapterCount / 100);
+
+  _(chapterCount).times(chapter => {
+    if (finished) {
+      return;
+    }
+
+    if (chapterCount > 1) {
+      result += `<h2>Chapter ${chapter + 1} &mdash; ${toUpperFirst(_(3).times(f => _.sample(sourceWords)).join (' '))}</h2>`
+    }
+    _(paragraphsPerChapter).times(paragraph => {
+      if (finished) {
+        return;
+      }
+
+      result += '<p>';
+      _(Math.floor(Math.random() * 7) + 1).times(sentence => {
+        if (finished) {
+          return;
+        }
+
+        _(Math.floor((Math.random() * 10) / 3) + 1).times(phrase => {
+
+          _(Math.floor(Math.random() * 10) + 1).times(word => {
+            let sourceWord = _.sample(sourceWords);
+            if (phrase === 0 && word === 0) {
+              sourceWord = toUpperFirst(sourceWord);
+            }
+
+            result += sourceWord + ' ';
+            words++;
+          });
+
+          result = result.slice(0, result.length - 1) + ', ';
         });
-        result = result.slice(0, result.length - 1) + ', ';
+
+        result = result.slice(0, result.length - 2) + '.  ';
+        if (words > wordCount) {
+          finished = true;
+        }
       });
-      result = result.slice(0, result.length - 2) + '.  ';
+
+      result += '</p>';
     });
-    result += '</p>';
   });
 
   $('#yipsum').html(result);
-});
+}
+
+gen();
