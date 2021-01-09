@@ -3,21 +3,24 @@
     <title>Furry Lipsum</title>
     <script type="text/javascript" src="lib/underscore-min.js"></script>
     <script type="text/javascript" src="lib/zepto.min.js"></script>
-    <link href="//fonts.googleapis.com/css?family=Gentium+Book+Basic|Cabin" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet" type="text/css" />
     <style>
       body {
         font-family: 'Gentium Book Basic', serif;
         margin: 0 20%;
+        line-height: 1.4;
       }
       h1 {
         border-bottom: 1px dotted black;
-        margin: 1em 0;
+        margin: 1rem 0;
       }
       .form {
         text-align: center;
       }
-      h2 {
-        font-variant: titling-caps;
+      footer {
+        border-top: 1px dotted black;
+        opacity: 0.5;
+        margin-top: 2rem;
       }
     </style>
   </head>
@@ -36,5 +39,8 @@
     </div>
     <div id="yipsum"></div>
     <script type="text/javascript" src="yipsum.js"></script>
+    <footer>
+      <p>It's <a href="https://twitter.com/makyo_writes" target="_blank">Maddy's</a> fault</p>
+    </footer>
   </body>
 </html>
