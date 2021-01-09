@@ -4,6 +4,10 @@ const sourceWords = [
   'furry',
   'furre',
   'furries',
+  'fursona',
+  '\'sona',
+  'alt',
+  'character',
 
   // Conventions
   'con',
@@ -69,7 +73,6 @@ const sourceWords = [
   'otter',
   'sparkledog',
 
-
   // Noises
   'yap',
   'yip',
@@ -80,6 +83,9 @@ const sourceWords = [
   'murr',
   'reh',
   'squeak',
+  'awoo',
+  'awooooo',
+  'awoooooooooo',
 
   // Verbs
   'wiggle',
@@ -94,7 +100,9 @@ const sourceWords = [
   'fluff',
   'glomp',
   'clop',
-  'nuzzle',
+  'snuggle',
+  'snug',
+  'noodle',
 
   // Etc.
   'graymuzzle',
